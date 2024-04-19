@@ -1,7 +1,5 @@
 import { List, Typography } from "@mui/material";
-import { marked } from "marked";
 import Item from "../components/Item";
-import { HOST_APP_CODE, REMOTE_APP_CODE } from "../constants";
 import { BoldText } from "../styled";
 
 const Mf = ({ id }: { id: number }) => {
@@ -17,7 +15,7 @@ const Mf = ({ id }: { id: number }) => {
           Module federation
         </Typography>
         <List>
-          <Item sx={{ fontSize: "24px" }}>
+          <Item sx={{ fontSize: "24px", textAlign: "center" }}>
             Multiple Several separate builds form a single application. These
             separate builds act like containers and can expose and consume code
             between builds, creating a single, unified application.
@@ -37,9 +35,10 @@ const Mf = ({ id }: { id: number }) => {
             Module federation allows a JavaScript application to load code from
             another application <BoldText>dynamically</BoldText> — in the
             process, sharing dependencies, if an application consuming a
-            federated module does not have a dependency needed by the federated
-            code — Webpack (or the bandler you're using) will download the
-            missing dependency from that federated build origin.
+            federated module <BoldText>does not have a dependency </BoldText>{" "}
+            needed by the federated code — Webpack (or the bandler you're using){" "}
+            <BoldText>will download the missing dependency</BoldText> from that
+            federated build origin.
           </Item>
         </List>
       </section>
@@ -47,18 +46,36 @@ const Mf = ({ id }: { id: number }) => {
       <section key={`${id}-3`}>
         <Typography variant="h4">Remote Application:</Typography>
 
-        {/* <Box className="fragment"> */}
-        <div
+        {/* <div
           dangerouslySetInnerHTML={{ __html: marked(REMOTE_APP_CODE) }}
-        ></div>
-        {/* </Box> */}
+        ></div> */}
+
+        <img
+          className="fragment"
+          style={{ height: "480px", margin: "0 auto" }}
+          src="./assets/remote_app_mf.png"
+        />
       </section>
 
       <section key={`${id}-4`}>
         <Typography variant="h4">Host Application:</Typography>
-        {/* <Box className="fragment"> */}
-        <div dangerouslySetInnerHTML={{ __html: marked(HOST_APP_CODE) }}></div>
-        {/* </Box> */}
+
+        {/* <div dangerouslySetInnerHTML={{ __html: marked(HOST_APP_CODE) }}></div> */}
+        <img
+          className="fragment"
+          style={{ height: "480px", margin: "0 auto" }}
+          src="./assets/host_app_mf.png"
+        />
+      </section>
+
+      <section key={`${id}-5`}>
+        <Typography variant="h4">Import from remote application:</Typography>
+        <p>remoteApp1</p>
+        <img
+          className="fragment"
+          style={{ height: "300px", width: "1000px", margin: "0 auto" }}
+          src="./assets/import_comp_mf_react.png"
+        />
       </section>
     </section>
   );

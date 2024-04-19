@@ -1,5 +1,5 @@
 export const REMOTE_APP_CODE = `
-\`\`\`typescript
+
 new ModuleFederationPlugin({
     name: 'remoteApp1',
     filename: 'remoteEntry.js',

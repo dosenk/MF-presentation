@@ -19,9 +19,7 @@ const Goals = ({ id }: { id: number }) => {
         <p>
           Choosing monorepository management tools for efficient caching and
           simplified project management that improves development workflow by
-          optimized resource utilization, including Server-Side Rendering (SSR)
-          to enhance performance and facilitate seamless rendering of React
-          components on the server-side
+          optimized resource utilization and optimizing CI performance.
         </p>
         <List>
           {/* <Item variant="h3">

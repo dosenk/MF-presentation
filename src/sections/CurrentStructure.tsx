@@ -3,15 +3,17 @@ import Item from "../components/Item";
 
 const CurrentStructure = ({ id }: { id: number }) => {
   return (
-    <section key={`${id}`} data-background-color="#708090">
+    <section key={`${id}`} data-background-color="#faf0e6">
       <section key={`${id}-0`}>
-        <Typography variant="h2">Current Structure</Typography>
+        <Typography variant="h3">Current Structure</Typography>
         <Box display="flex" gap="15px">
           <List>
-            <Item sx={{ color: "#fff", fontWeight: "bold" }}>Tools:</Item>
-            <Item sx={{ color: "#fffdd0", fontWeight: "bold" }}>NX</Item>
-            <Item sx={{ color: "#fffdd0", fontWeight: "bold" }}>Rspack</Item>
-            <Item sx={{ color: "#fffdd0", fontWeight: "bold" }}>Pnpm</Item>
+            <Item sx={{ color: "#581790", fontWeight: "bold", fontSize: 49 }}>
+              Tools:
+            </Item>
+            <Item sx={{ color: "#05286f", fontWeight: "bold" }}>NX</Item>
+            <Item sx={{ color: "#05286f", fontWeight: "bold" }}>Rspack</Item>
+            <Item sx={{ color: "#05286f", fontWeight: "bold" }}>Pnpm</Item>
           </List>
           <Box className="fragment">
             <img src="./assets/current_structure.png" />
@@ -20,55 +22,7 @@ const CurrentStructure = ({ id }: { id: number }) => {
       </section>
 
       <section key={`${id}-1`}>
-        <Typography variant="h2">Monorepository management tools</Typography>
-
-        <List>
-          <Item>
-            <Typography variant="h2">NX</Typography>
-          </Item>
-          <Item>Advantages: </Item>
-          <Item>1</Item>
-          <Item>2</Item>
-          <Item>3</Item>
-        </List>
-      </section>
-
-      <section key={`${id}-2`}>
-        <Typography variant="h2">Bundler</Typography>
-
-        <List>
-          <Item>
-            <Typography variant="h2">RSpack</Typography>
-          </Item>
-          <Item>Advantages: </Item>
-          <Item>1</Item>
-          <Item>2</Item>
-          <Item>3</Item>
-        </List>
-      </section>
-
-      <section key={`${id}-3`}>
-        <Typography variant="h2">Package manager</Typography>
-
-        <List>
-          <Item>
-            <Typography variant="h2">Pnpm</Typography>
-          </Item>
-          <Item>Advantages: </Item>
-          <Item>1</Item>
-          <Item>2</Item>
-          <Item>3</Item>
-        </List>
-      </section>
-
-      <section key={`${id}-3`}>
-        <Typography variant="h2">Code:</Typography>
-
-        <List>
-          <Item>Image 1</Item>
-          <Item>Image 1</Item>
-          <Item>Image 1</Item>
-        </List>
+        <img src="./assets/shell_with_apps.png" />
       </section>
     </section>
   );

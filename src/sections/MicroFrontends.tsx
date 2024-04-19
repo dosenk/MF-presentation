@@ -6,8 +6,8 @@ const MicroFrontends = ({ id }: { id: number }) => {
       <section key={`${id}-0`}>
         <Typography variant="h2">Micro Frontends</Typography>
         <p>
-          Front-end web development pattern in which a single application may be
-          built from disparate builds
+          Front-end web development pattern in which a single application can be
+          created from different builds
         </p>
       </section>
       <section key={`${id}-1`}>

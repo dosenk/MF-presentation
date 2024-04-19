@@ -1,17 +1,49 @@
-import { List, Typography } from "@mui/material";
+import DoubleArrowIcon from "@mui/icons-material/DoubleArrow";
+import { List, ListItemIcon, Typography } from "@mui/material";
 import Item from "../components/Item";
-
 const Conclusions = ({ id }: { id: number }) => {
   return (
-    <section key={`${id}`} data-background-color="#708090">
+    <section key={`${id}`}>
       <section key={`${id}-0`}>
-        <Typography variant="h2">Conclusions</Typography>
+        <Typography variant="h2">Resources</Typography>
 
         <List>
-          <Item>1</Item>
-          <Item>2</Item>
-          <Item>3</Item>
-          <Item>4</Item>
+          <Item disablePadding sx={{ fontSize: 27 }}>
+            <ListItemIcon>
+              <DoubleArrowIcon />
+            </ListItemIcon>
+            https://webpack.js.org/concepts/module-federation/
+          </Item>
+          <Item disablePadding sx={{ fontSize: 27 }}>
+            <ListItemIcon>
+              <DoubleArrowIcon />
+            </ListItemIcon>
+            https://module-federation.io/
+          </Item>
+          <Item disablePadding sx={{ fontSize: 27 }}>
+            <ListItemIcon>
+              <DoubleArrowIcon />
+            </ListItemIcon>
+            https://github.com/module-federation
+          </Item>
+          <Item disablePadding sx={{ fontSize: 27 }}>
+            <ListItemIcon>
+              <DoubleArrowIcon />
+            </ListItemIcon>
+            https://nx.dev/concepts/module-federation/module-federation-and-nx
+          </Item>
+          <Item disablePadding sx={{ fontSize: 27 }}>
+            <ListItemIcon>
+              <DoubleArrowIcon />
+            </ListItemIcon>
+            https://www.npmjs.com/package/@module-federation/nextjs-mf
+          </Item>
+          <Item disablePadding sx={{ fontSize: 27 }}>
+            <ListItemIcon>
+              <DoubleArrowIcon />
+            </ListItemIcon>
+            https://micro-frontends.org/
+          </Item>
         </List>
       </section>
     </section>
