@@ -15,6 +15,11 @@ const UsingTools = ({ id }: { id: number }) => {
               alignItems="center"
               justifyContent="space-between"
               width="500px"
+              sx={{
+                "&>p": {
+                  margin: 0,
+                },
+              }}
             >
               <p>Lage</p> <img width="100px" src="./assets/logo_lage.png" />
             </Box>
@@ -26,6 +31,11 @@ const UsingTools = ({ id }: { id: number }) => {
               alignItems="center"
               justifyContent="space-between"
               width="500px"
+              sx={{
+                "&>p": {
+                  margin: 0,
+                },
+              }}
             >
               <p>Nx</p> <img width="70px" src="./assets/logo_nx.png" />
             </Box>
@@ -37,6 +47,11 @@ const UsingTools = ({ id }: { id: number }) => {
               alignItems="center"
               justifyContent="space-between"
               width="500px"
+              sx={{
+                "&>p": {
+                  margin: 0,
+                },
+              }}
             >
               <BoldText>Turborepo</BoldText>
               <img width="150px" src="./assets/logo_turborepo.png" />
@@ -49,6 +64,11 @@ const UsingTools = ({ id }: { id: number }) => {
               alignItems="center"
               justifyContent="space-between"
               width="500px"
+              sx={{
+                "&>p": {
+                  margin: 0,
+                },
+              }}
             >
               <p>Rush </p>
               <img width="50px" src="./assets/logo_rush.png" />
@@ -87,7 +107,7 @@ const UsingTools = ({ id }: { id: number }) => {
       </section>
 
       <section key={`${id}-4`}>
-        <img height="750px" src="./assets/pnpm_npm_yarn.jpeg" />
+        <img height="630px" src="./assets/pnpm_npm_yarn.jpeg" />
       </section>
     </section>
   );

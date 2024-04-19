@@ -46,7 +46,11 @@ const Goals = ({ id }: { id: number }) => {
           compatibility with other projects, and speeds up the development
           process
         </p>
-        <img className="fragment" src="./assets/shared_ui_lib.png" />
+        <img
+          height="440px"
+          className="fragment"
+          src="./assets/shared_ui_lib.png"
+        />
       </section>
       <section key={`${id}-5`}>
         <Box>
@@ -57,7 +61,7 @@ const Goals = ({ id }: { id: number }) => {
           </p>
         </Box>
         <List>
-          <Item variant="h5" className="fragment">
+          <Item className="fragment">
             Webpack, Vite, Rspack, Esbuild, swr, Rollup
           </Item>
           <img className="fragment  " src="./assets/bundlers.png" />

@@ -10,37 +10,37 @@ const Conclusions = ({ id }: { id: number }) => {
         <List>
           <Item disablePadding sx={{ fontSize: 27 }}>
             <ListItemIcon>
-              <DoubleArrowIcon />
+              <DoubleArrowIcon color="error" />
             </ListItemIcon>
             https://webpack.js.org/concepts/module-federation/
           </Item>
           <Item disablePadding sx={{ fontSize: 27 }}>
             <ListItemIcon>
-              <DoubleArrowIcon />
+              <DoubleArrowIcon color="error" />
             </ListItemIcon>
             https://module-federation.io/
           </Item>
           <Item disablePadding sx={{ fontSize: 27 }}>
             <ListItemIcon>
-              <DoubleArrowIcon />
+              <DoubleArrowIcon color="error" />
             </ListItemIcon>
             https://github.com/module-federation
           </Item>
           <Item disablePadding sx={{ fontSize: 27 }}>
             <ListItemIcon>
-              <DoubleArrowIcon />
+              <DoubleArrowIcon color="error" />
             </ListItemIcon>
             https://nx.dev/concepts/module-federation/module-federation-and-nx
           </Item>
           <Item disablePadding sx={{ fontSize: 27 }}>
             <ListItemIcon>
-              <DoubleArrowIcon />
+              <DoubleArrowIcon color="error" />
             </ListItemIcon>
             https://www.npmjs.com/package/@module-federation/nextjs-mf
           </Item>
           <Item disablePadding sx={{ fontSize: 27 }}>
             <ListItemIcon>
-              <DoubleArrowIcon />
+              <DoubleArrowIcon color="error" />
             </ListItemIcon>
             https://micro-frontends.org/
           </Item>

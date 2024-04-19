@@ -23,7 +23,7 @@ const Mf = ({ id }: { id: number }) => {
         </List>
         <img
           className="fragment"
-          style={{ height: "480px", margin: "0 auto" }}
+          style={{ height: "440px", margin: "0 auto" }}
           src="./assets/mf-example.png"
         />
       </section>

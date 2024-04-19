@@ -50,7 +50,7 @@ const Difficulties = ({ id }: { id: number }) => {
       <section key={`${id}-3`}>
         <Typography variant="h3">Remote MF config:</Typography>
         <img
-          style={{ height: "640px" }}
+          style={{ height: "550px" }}
           src="./assets/next_mf_config_remote.png"
         />
         {/* <div dangerouslySetInnerHTML={{ __html: marked(NEXT_MF_HOST) }}></div> */}
@@ -148,7 +148,7 @@ const Difficulties = ({ id }: { id: number }) => {
       </section>
 
       <section key={`${id}-8`}>
-        <img src="./assets/webpack-vite.png" />
+        <img height="650px" src="./assets/webpack-vite.png" />
       </section>
 
       <section key={`${id}-9`}>

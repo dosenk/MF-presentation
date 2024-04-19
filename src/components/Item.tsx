@@ -8,7 +8,7 @@ const Item = ({
 }: { children: ReactNode } & ListItemProps) => {
   return (
     <ListItem className={className} {...props}>
-      <p>{children}</p>
+      <p style={{ margin: "2px 0px" }}>{children}</p>
     </ListItem>
   );
 };
