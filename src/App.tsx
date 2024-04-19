@@ -6,7 +6,10 @@ import RevealZoom from "reveal.js/plugin/zoom/zoom";
 
 import "highlight.js/styles/github.css";
 
+import hljs from "highlight.js";
+import { useEffect } from "react";
 import Conclusions from "./sections/Conclusions";
+import CurrentStructure from "./sections/CurrentStructure";
 import Difficulties from "./sections/Difficulties";
 import Mf from "./sections/Mf";
 import MicroFrontends from "./sections/MicroFrontends";
@@ -14,10 +17,15 @@ import Structure from "./sections/Structure";
 import UsingTools from "./sections/UsingTools";
 import Goals from "./sections/goals";
 
+import javascript from "highlight.js/lib/languages/javascript";
+import typescript from "highlight.js/lib/languages/typescript";
+
 export default function App() {
-  // useEffect(() => {
-  //   hljs.highlightAll();
-  // }, []);
+  useEffect(() => {
+    // hljs.highlightAll();
+    hljs.registerLanguage("javascript", javascript);
+    hljs.registerLanguage("typescript", typescript);
+  }, []);
 
   return (
     <RevealSlides
@@ -37,7 +45,9 @@ export default function App() {
 
       <Difficulties id={5} />
 
-      <Conclusions id={6} />
+      <CurrentStructure id={6} />
+
+      <Conclusions id={7} />
     </RevealSlides>
   );
 }

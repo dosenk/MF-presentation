@@ -1,9 +1,17 @@
 import { Box, List, Typography } from "@mui/material";
 import Item from "../components/Item";
 
+const itemSx = {
+  fontSize: 50,
+  fontWeight: "bold",
+  p: 0,
+  m: 0,
+  color: "#CC5533",
+};
+
 const Structure = ({ id }: { id: number }) => {
   return (
-    <section key={`${id}`} data-background-color="#708090">
+    <section key={`${id}`} data-background-color="#E6E6FA">
       <section key={`${id}-0`}>
         <Typography variant="h2">Project structure</Typography>
         <img src="./assets/structure_mf.png" />
@@ -16,15 +24,17 @@ const Structure = ({ id }: { id: number }) => {
 
       <section key={`${id}-2`}>
         <Typography variant="h2">Shared Packages</Typography>
-        <List>
-          <Item>React</Item>
-          <Item>React-Dom</Item>
-          <Item>Mui</Item>
-          <Item>emotion</Item>
-        </List>
+        <Box display="flex" gap="50px">
+          <List>
+            <Item sx={itemSx}>React</Item>
+            <Item sx={itemSx}>React-Dom</Item>
+            <Item sx={itemSx}>Mui</Item>
+            <Item sx={itemSx}>Emotion</Item>
+          </List>
 
-        <Box className="fragment">
-          <img src="./assets/shared_packages.png" />
+          <Box className="fragment">
+            <img src="./assets/shared_packages.png" />
+          </Box>
         </Box>
       </section>
     </section>

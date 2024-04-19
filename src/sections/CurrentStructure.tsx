@@ -1,19 +1,22 @@
-import { List, Typography } from "@mui/material";
+import { Box, List, Typography } from "@mui/material";
 import Item from "../components/Item";
 
 const CurrentStructure = ({ id }: { id: number }) => {
   return (
     <section key={`${id}`} data-background-color="#708090">
       <section key={`${id}-0`}>
-        <Typography variant="h2">CurrentStructure</Typography>
-
-        <List>
-          <Item>
-            <Typography variant="h2">Rspack:</Typography>
-          </Item>
-          <Item>NX</Item>
-          <Item>Pnpm</Item>
-        </List>
+        <Typography variant="h2">Current Structure</Typography>
+        <Box display="flex" gap="15px">
+          <List>
+            <Item sx={{ color: "#fff", fontWeight: "bold" }}>Tools:</Item>
+            <Item sx={{ color: "#fffdd0", fontWeight: "bold" }}>NX</Item>
+            <Item sx={{ color: "#fffdd0", fontWeight: "bold" }}>Rspack</Item>
+            <Item sx={{ color: "#fffdd0", fontWeight: "bold" }}>Pnpm</Item>
+          </List>
+          <Box className="fragment">
+            <img src="./assets/current_structure.png" />
+          </Box>
+        </Box>
       </section>
 
       <section key={`${id}-1`}>

@@ -2,7 +2,7 @@ import { Box, Typography } from "@mui/material";
 
 const MicroFrontends = ({ id }: { id: number }) => {
   return (
-    <section key={id} data-background-color="#0c1">
+    <section key={id}>
       <section key={`${id}-0`}>
         <Typography variant="h2">Micro Frontends</Typography>
         <p>

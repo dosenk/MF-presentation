@@ -4,7 +4,7 @@ import { BoldText } from "../styled";
 
 const Goals = ({ id }: { id: number }) => {
   return (
-    <section key={`${id}`} data-background-color="#bf4f41">
+    <section key={`${id}`}>
       <section key={`${id}-0`}>
         <h2>Our goals</h2>
       </section>
@@ -28,7 +28,7 @@ const Goals = ({ id }: { id: number }) => {
             SSR Frameworks (Next.js vs SvelteKit vs Nuxt vs Quasar vs Gatsby)
           </Item> */}
           {/* <Item variant="h3">JavaScript Frameworks (React, Angular, Vue)</Item> */}
-          <Item variant="h3">Monorepo tools (Nx, Turborepo, Lage, Rush)</Item>
+          <img className="fragment" src="./assets/monorepo_tools.png" />
           {/* <Item variant="h3">Package managers (Npm, Yarn, Pnpm)</Item> */}
         </List>
       </section>
@@ -40,6 +40,7 @@ const Goals = ({ id }: { id: number }) => {
           optimise scalability, flexibility and interoperability in the system
           architecture.
         </p>
+        <img className="fragment" src="./assets/mf_logo.png" />
       </section>
       <section key={`${id}-4`}>
         <p>
@@ -47,23 +48,21 @@ const Goals = ({ id }: { id: number }) => {
           compatibility with other projects, and speeds up the development
           process
         </p>
-        <List>
-          <Item variant="h3">Shared-ui library:</Item>
-          <Item variant="h4">Use locally</Item>
-          <Item variant="h4">Use as npm(github) package</Item>
-        </List>
+        <img className="fragment" src="./assets/shared_ui_lib.png" />
       </section>
       <section key={`${id}-5`}>
         <Box>
-          <p>
+          <p className="custom blur">
             Employing bundlers and build systems to accelerate local development
             processes and increase developer productivity by speeding up
             workflows
           </p>
         </Box>
         <List>
-          <Item variant="h4">Webpack, Vite, Rspack</Item>
-          <Item variant="h4">Esbuild, swr, Rollup</Item>
+          <Item variant="h5" className="fragment">
+            Webpack, Vite, Rspack, Esbuild, swr, Rollup
+          </Item>
+          <img className="fragment  " src="./assets/bundlers.png" />
         </List>
       </section>
     </section>

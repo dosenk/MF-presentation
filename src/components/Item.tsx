@@ -1,14 +1,14 @@
-import { ListItem, Typography, TypographyProps } from "@mui/material";
+import { ListItem, ListItemProps } from "@mui/material";
 import { ReactNode } from "react";
 
 const Item = ({
   children,
   className = "fragment",
   ...props
-}: { children: ReactNode } & TypographyProps) => {
+}: { children: ReactNode } & ListItemProps) => {
   return (
-    <ListItem className={className}>
-      <Typography {...props}>{children}</Typography>
+    <ListItem className={className} {...props}>
+      <p>{children}</p>
     </ListItem>
   );
 };
