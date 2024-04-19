@@ -38,7 +38,7 @@ const Difficulties = ({ id }: { id: number }) => {
         </Box>
       </section>
 
-      <section key={`${id}-1`}>
+      <section key={`${id}-2`}>
         <Typography variant="h3">Host MF config:</Typography>
         <img
           style={{ height: "580px" }}
@@ -47,7 +47,7 @@ const Difficulties = ({ id }: { id: number }) => {
         {/* <div dangerouslySetInnerHTML={{ __html: marked(NEXT_MF_HOST) }}></div> */}
       </section>
 
-      <section key={`${id}-2`}>
+      <section key={`${id}-3`}>
         <Typography variant="h3">Remote MF config:</Typography>
         <img
           style={{ height: "640px" }}
@@ -56,7 +56,7 @@ const Difficulties = ({ id }: { id: number }) => {
         {/* <div dangerouslySetInnerHTML={{ __html: marked(NEXT_MF_HOST) }}></div> */}
       </section>
 
-      <section key={`${id}-3`}>
+      <section key={`${id}-4`}>
         <Typography variant="h3">
           Issues with module federation{" "}
           <p style={{ color: "#555555", fontSize: 25 }}>
@@ -105,13 +105,13 @@ const Difficulties = ({ id }: { id: number }) => {
         </List>
       </section>
 
-      <section key={`${id}-4`}>
+      <section key={`${id}-5`}>
         <Typography variant="h2">Turborepo - NX</Typography>
 
         <img src="./assets/turborepo_nx.png" />
       </section>
 
-      <section key={`${id}-5`}>
+      <section key={`${id}-6`}>
         <Typography variant="h3">NX</Typography>
 
         <p style={{ width: "1100px", fontSize: 26 }}>
@@ -142,28 +142,28 @@ const Difficulties = ({ id }: { id: number }) => {
         </List>
       </section>
 
-      <section key={`${id}-6`}>
+      <section key={`${id}-7`}>
         <Typography variant="h4">Pick Your Stack for NX</Typography>
         <img src="./assets/nx_stack.png" />
       </section>
 
-      <section key={`${id}-7`}>
+      <section key={`${id}-8`}>
         <img src="./assets/webpack-vite.png" />
       </section>
 
-      <section key={`${id}-8`}>
+      <section key={`${id}-9`}>
         <Typography variant="h2">Webpack - Vite</Typography>
 
         <img src="./assets/webpack_vite_compare.png" />
       </section>
 
-      <section key={`${id}-9`}>
+      <section key={`${id}-10`}>
         <Typography variant="h2">Rspack</Typography>
 
         <img src="./assets/why_rspack.png" />
       </section>
 
-      <section key={`${id}-9`}>
+      <section key={`${id}-11`}>
         <Typography variant="h4">
           It's still raw, but it's totally satisfying for us...
         </Typography>

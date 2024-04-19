@@ -1,13 +1,9 @@
-import { RevealSlides } from "react-reveal-slides";
-
-import RevealHighlight from "reveal.js/plugin/highlight/highlight";
-import RevealNotes from "reveal.js/plugin/notes/notes";
-import RevealZoom from "reveal.js/plugin/zoom/zoom";
-
 import "highlight.js/styles/github.css";
+import "reveal.js/dist/reveal.css";
+import "reveal.js/dist/theme/dracula.css";
 
 import hljs from "highlight.js";
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 import Conclusions from "./sections/Conclusions";
 import CurrentStructure from "./sections/CurrentStructure";
 import Difficulties from "./sections/Difficulties";
@@ -19,35 +15,61 @@ import Goals from "./sections/goals";
 
 import javascript from "highlight.js/lib/languages/javascript";
 import typescript from "highlight.js/lib/languages/typescript";
+import Reveal from "reveal.js";
 
 export default function App() {
   useEffect(() => {
-    // hljs.highlightAll();
     hljs.registerLanguage("javascript", javascript);
     hljs.registerLanguage("typescript", typescript);
   }, []);
 
+  const deckDivRef = useRef<HTMLDivElement>(null); // reference to deck container div
+  const deckRef = useRef<Reveal.Api | null>(null); // reference to deck reveal instance
+
+  useEffect(() => {
+    // Prevents double initialization in strict mode
+    if (deckRef.current) return;
+
+    deckRef.current = new Reveal(deckDivRef.current!, {
+      transition: "slide",
+      // other config options
+    });
+
+    deckRef.current.initialize().then(() => {
+      // good place for event handlers and plugin setups
+    });
+
+    return () => {
+      try {
+        if (deckRef.current) {
+          deckRef.current.destroy();
+          deckRef.current = null;
+        }
+      } catch (e) {
+        console.warn("Reveal.js destroy call failed.");
+      }
+    };
+  }, []);
+
   return (
-    <RevealSlides
-      controls={true}
-      plugins={[RevealZoom, RevealNotes, RevealHighlight]}
-      onStateChange={(state) => console.log(state)}
-    >
-      <MicroFrontends id={0} />
+    <div className="reveal" ref={deckDivRef}>
+      <div className="slides">
+        <MicroFrontends id={0} />
 
-      <Goals id={1} />
+        <Goals id={1} />
 
-      <Mf id={2} />
+        <Mf id={2} />
 
-      <UsingTools id={3} />
+        <UsingTools id={3} />
 
-      <Structure id={4} />
+        <Structure id={4} />
 
-      <Difficulties id={5} />
+        <Difficulties id={5} />
 
-      <CurrentStructure id={6} />
+        <CurrentStructure id={6} />
 
-      <Conclusions id={7} />
-    </RevealSlides>
+        <Conclusions id={7} />
+      </div>
+    </div>
   );
 }
