@@ -13,7 +13,10 @@ const Structure = ({ id }: { id: number }) => {
   return (
     <section key={`${id}`} data-background-color="#E6E6FA">
       <section key={`${id}-0`}>
-        <Typography variant="h2">Project structure</Typography>
+        <Typography variant="h2">
+          Project structure{" "}
+          <span style={{ fontSize: 30, fontWeight: "lighter" }}>initially</span>
+        </Typography>
         <img src="./assets/structure_mf.png" />
       </section>
 

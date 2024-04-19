@@ -20,6 +20,23 @@ const Difficulties = ({ id }: { id: number }) => {
         >
           @module-federation/nextjs-mf
         </a>
+      </section>
+
+      <section key={`${id}-1`}>
+        <Typography variant="h3">Plugins</Typography>
+        <Box display="flex" gap={1} flexDirection="row" justifyContent="center">
+          <img
+            style={{ height: "380px", width: "700px" }}
+            src="./assets/webpack_mf_plugin.png"
+          />
+          <img
+            style={{ height: "380px", width: "700px" }}
+            src="./assets/next_mf_plugin.png"
+          />
+        </Box>
+      </section>
+
+      <section key={`${id}-1`}>
         <p>Host MF config:</p>
         <img
           style={{ height: "580px" }}
@@ -28,7 +45,7 @@ const Difficulties = ({ id }: { id: number }) => {
         {/* <div dangerouslySetInnerHTML={{ __html: marked(NEXT_MF_HOST) }}></div> */}
       </section>
 
-      <section key={`${id}-1`}>
+      <section key={`${id}-2`}>
         <p>Remote MF config:</p>
         <img
           style={{ height: "640px" }}
@@ -37,7 +54,7 @@ const Difficulties = ({ id }: { id: number }) => {
         {/* <div dangerouslySetInnerHTML={{ __html: marked(NEXT_MF_HOST) }}></div> */}
       </section>
 
-      <section key={`${id}-2`}>
+      <section key={`${id}-3`}>
         <Typography variant="h3">Issues with module federation</Typography>
 
         <List>
@@ -64,23 +81,23 @@ const Difficulties = ({ id }: { id: number }) => {
         </List>
       </section>
 
-      <section key={`${id}-3`}>
+      <section key={`${id}-4`}>
         <Typography variant="h2">Turborepo - NX</Typography>
 
         <img src="./assets/turborepo_nx.png" />
       </section>
 
-      <section key={`${id}-4`}>
+      <section key={`${id}-5`}>
         <img src="./assets/webpack-vite.png" />
       </section>
 
-      <section key={`${id}-5`}>
+      <section key={`${id}-6`}>
         <Typography variant="h2">Webpack - Vite</Typography>
 
         <img src="./assets/webpack_vite_compare.png" />
       </section>
 
-      <section key={`${id}-6`}>
+      <section key={`${id}-7`}>
         <Typography variant="h2">Rspack</Typography>
 
         <img src="./assets/why_rspack.png" />
