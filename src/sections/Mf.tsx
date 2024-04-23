@@ -11,11 +11,25 @@ const Mf = ({ id }: { id: number }) => {
       </section>
 
       <section key={`${id}-1`}>
+        <List>
+          <Item className="text">
+            Module federation allows a JavaScript application to load code from
+            another application <BoldText>dynamically</BoldText> — in the
+            process, sharing dependencies, if an application consuming a
+            federated module <BoldText>does not have a dependency </BoldText>{" "}
+            needed by the federated code — Webpack (or the bundler you're using){" "}
+            <BoldText>will download the missing dependency</BoldText> from that
+            federated build origin.
+          </Item>
+        </List>
+      </section>
+
+      <section key={`${id}-2`}>
         <Typography variant="h4" sx={{ mb: 0 }}>
           Module federation
         </Typography>
         <List>
-          <Item sx={{ fontSize: "24px", textAlign: "center" }}>
+          <Item sx={{ fontSize: "24px", textAlign: "center" }} className="text">
             Multiple Several separate builds form a single application. These
             separate builds act like containers and can expose and consume code
             between builds, creating a single, unified application.
@@ -26,21 +40,6 @@ const Mf = ({ id }: { id: number }) => {
           style={{ height: "440px", margin: "0 auto" }}
           src="./assets/mf-example.png"
         />
-      </section>
-
-      <section key={`${id}-2`}>
-        <Typography variant="h4">Why we need module federation</Typography>
-        <List>
-          <Item className="fragment">
-            Module federation allows a JavaScript application to load code from
-            another application <BoldText>dynamically</BoldText> — in the
-            process, sharing dependencies, if an application consuming a
-            federated module <BoldText>does not have a dependency </BoldText>{" "}
-            needed by the federated code — Webpack (or the bandler you're using){" "}
-            <BoldText>will download the missing dependency</BoldText> from that
-            federated build origin.
-          </Item>
-        </List>
       </section>
 
       <section key={`${id}-3`}>

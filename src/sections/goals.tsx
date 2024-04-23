@@ -12,7 +12,8 @@ const Goals = ({ id }: { id: number }) => {
         <p>
           Develop a modular, partitioned application architecture capable of
           distributed deployment, providing scalability, fault tolerance and
-          efficient resource utilisation within a mono-repository
+          efficient resource utilisation within a mono-repository using SSR for
+          performance improvement and SEO optimization
         </p>
       </section>
       <section key={`${id}-2`}>
@@ -62,7 +63,7 @@ const Goals = ({ id }: { id: number }) => {
         </Box>
         <List>
           <Item className="fragment">
-            Webpack, Vite, Rspack, Esbuild, swr, Rollup
+            Webpack, Vite, Rspack, Esbuild, Rollup, Parcel
           </Item>
           <img className="fragment  " src="./assets/bundlers.png" />
         </List>

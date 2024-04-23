@@ -58,9 +58,9 @@ export default function App() {
 
         <Goals id={1} />
 
-        <Mf id={2} />
+        <UsingTools id={2} />
 
-        <UsingTools id={3} />
+        <Mf id={3} />
 
         <Structure id={4} />
 

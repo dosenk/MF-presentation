@@ -1,4 +1,4 @@
-import { Box, List, Typography } from "@mui/material";
+import { Box, List, ListItem, Typography } from "@mui/material";
 import Item from "../components/Item";
 import { BoldText } from "../styled";
 
@@ -6,7 +6,8 @@ const UsingTools = ({ id }: { id: number }) => {
   return (
     <section key={id}>
       <section key={`${id}-0`}>
-        <Typography variant="h2">Monorepository management tools</Typography>
+        <Typography variant="h3">Monorepository management tools</Typography>
+
         <List>
           <Item disablePadding>
             <Box
@@ -74,17 +75,49 @@ const UsingTools = ({ id }: { id: number }) => {
               <img width="50px" src="./assets/logo_rush.png" />
             </Box>
           </Item>
+          <Item>
+            <a href="https://monorepo.tools/" target="_blank">
+              - - -{">"} monorepo.tools
+            </a>
+          </Item>
         </List>
       </section>
 
       <section key={`${id}-1`}>
-        <Typography variant="h3">Turborepo + Next.js = ❤</Typography>
+        <Typography variant="h3">NEXT.js</Typography>
+        <List>
+          <ListItem>
+            <p style={{ width: "290px" }}>Enhanced optimization</p>
+            <p style={{ fontSize: "20px", color: "gray" }}>
+              Automatic Image, Font, and Script Optimizations for improved UX
+              and Core Web Vitals.
+            </p>
+          </ListItem>
+          <ListItem>
+            <p style={{ width: "290px" }}>Fast rendering</p>
+            <p style={{ fontSize: "20px", color: "gray" }}>
+              Improved page loading speed due to pre-rendering and server-side
+              rendering
+            </p>
+          </ListItem>
+          <ListItem>
+            <p style={{ width: "290px" }}>Better SEO</p>
+            <p style={{ fontSize: "20px", color: "gray" }}>
+              Allows for a more flexible approach to SEO optimization compared
+              to SPA
+            </p>
+          </ListItem>
+        </List>
+      </section>
+
+      <section key={`${id}-2`}>
+        <Typography variant="h3">Turborepo + NEXT.js = ♡</Typography>
         <Box className="fragment">
           <img src="./assets/next_vercel.png" />
         </Box>
       </section>
 
-      <section key={`${id}-2`}>
+      <section key={`${id}-3`}>
         <Typography variant="h3">Turborepo</Typography>
         <p className="fragment">
           Turborepo is a high-performance build system for JavaScript and
@@ -95,7 +128,7 @@ const UsingTools = ({ id }: { id: number }) => {
         </Box>
       </section>
 
-      <section key={`${id}-3`}>
+      <section key={`${id}-4`}>
         <Typography variant="h2">Package manager</Typography>
         <List>
           <Item>npm</Item>
@@ -106,8 +139,19 @@ const UsingTools = ({ id }: { id: number }) => {
         </List>
       </section>
 
-      <section key={`${id}-4`}>
+      <section key={`${id}-5`}>
         <img height="630px" src="./assets/pnpm_npm_yarn.jpeg" />
+      </section>
+
+      <section key={`${id}-5`}>
+        <Typography variant="h4" p={0} m={0}>
+          But how do we make it all work together and meet our goals!
+        </Typography>
+        <p style={{ fontSize: "25px", padding: 0, margin: 0 }}>
+          ...providing scalability, fault tolerance and efficient resource
+          utilisation...
+        </p>
+        <img height="550px" src="./assets/tools_without_mf.png" />
       </section>
     </section>
   );

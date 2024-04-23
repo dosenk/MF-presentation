@@ -24,7 +24,7 @@ const Difficulties = ({ id }: { id: number }) => {
         </a>
       </section>
 
-      <section key={`${id}-1`}>
+      {/* <section key={`${id}-1`}>
         <Typography variant="h3">Plugins</Typography>
         <Box display="flex" gap={1} flexDirection="row" justifyContent="center">
           <img
@@ -36,7 +36,7 @@ const Difficulties = ({ id }: { id: number }) => {
             src="./assets/next_mf_plugin.png"
           />
         </Box>
-      </section>
+      </section> */}
 
       <section key={`${id}-2`}>
         <Typography variant="h3">Host MF config:</Typography>
